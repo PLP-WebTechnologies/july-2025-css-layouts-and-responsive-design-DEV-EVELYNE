@@ -1,0 +1,126 @@
+/* ========== Base Styles ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Header */
+.site-header {
+  background: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* Navigation (Flexbox) */
+.site-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  background: #34495e;
+}
+
+.site-nav li {
+  margin: 0.5rem;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+.site-nav a:hover {
+  background: #2ecc71;
+  border-radius: 5px;
+}
+
+/* Main Layout (Grid) */
+.site-main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Content */
+.content {
+  background: #ecf0f1;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #bdc3c7;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Flexbox Cards */
+.card-container {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Makes cards wrap on smaller screens */
+}
+
+.card {
+  flex: 1;
+  min-width: 150px;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+.site-footer {
+  background: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ========== Responsive Breakpoints ========== */
+
+/* Tablets */
+@media (max-width: 900px) {
+  .site-main {
+    grid-template-columns: 2fr 1fr; /* Narrower sidebar */
+  }
+
+  .site-nav ul {
+    flex-wrap: wrap;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .site-main {
+    grid-template-columns: 1fr; /* Stack content & sidebar */
+  }
+
+  .sidebar {
+    order: -1; /* Sidebar appears above content */
+  }
+
+  .site-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+}
