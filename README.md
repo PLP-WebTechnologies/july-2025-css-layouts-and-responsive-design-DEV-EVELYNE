@@ -9,5 +9,4 @@ This project demonstrates a **responsive webpage layout** built using **CSS Grid
 - **Responsive design** with breakpoints for desktop, tablet, and mobile  
 - Clean, maintainable HTML5 + CSS3 code    
 
----
 ✅ Created with raw **HTML5 & CSS3**.
